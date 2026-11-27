@@ -1,7 +1,11 @@
-id: liuyanxwx.flexspace
-name: 弹性空白
-description: 自动填充主界面一行的剩余空间，支持按权重分配和指定行宽。
-entranceAssembly: FlexSpace.dll
+id: LiuYan_xwx.FlexSpace
+name: FlexSpace
+description: 一个在主界面自动填充剩余空间的弹性空白插件
+entranceAssembly: "FlexSpace.dll"
+url: https://github.com/LiuYan-xwx/FlexSpace
 version: 0.1.0.0
 apiVersion: 2.0.0.0
 author: 流焰xwx
+repoOwner: LiuYan-xwx
+repoName: FlexSpace
+assetsRoot: master/FlexSpace
