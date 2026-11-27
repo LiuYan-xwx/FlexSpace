@@ -1,0 +1,51 @@
+<ci:ComponentBase
+    x:Class="FlexSpace.FlexSpaceSettingsControl"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ci="http://classisland.tech/schemas/xaml/core"
+    xmlns:fa="using:FluentAvalonia.UI.Controls"
+    xmlns:local="using:FlexSpace"
+    x:CompileBindings="True"
+    x:DataType="local:FlexSpaceComponentSettings"
+    x:TypeArguments="local:FlexSpaceComponentSettings">
+    <ScrollViewer>
+        <StackPanel Classes="component-settings-container">
+            <fa:SettingsExpander
+                Header="权重"
+                Description="同一行有多个留白时，按各自的权重分配剩余宽度。需要大于 0"
+                IconSource="{ci:FluentIconSource &#xEECB;}">
+                <fa:SettingsExpander.Footer>
+                    <NumericUpDown
+                        Width="120"
+                        AutomationProperties.Name="权重"
+                        Increment="1"
+                        Minimum="0.01"
+                        Value="{Binding Weight, Mode=TwoWay}" />
+                </fa:SettingsExpander.Footer>
+            </fa:SettingsExpander>
+            <fa:SettingsExpander
+                Header="目标行宽"
+                Description="为 0 时跟随主界面最大宽度。有多个组件设置时使用最左侧组件中的设置。"
+                IconSource="{ci:FluentIconSource &#xE091;}">
+                <fa:SettingsExpander.Footer>
+                    <NumericUpDown
+                        Width="120"
+                        AutomationProperties.Name="目标行宽"
+                        FormatString="0"
+                        Increment="10"
+                        Maximum="2147483647"
+                        Minimum="0"
+                        Value="{Binding TargetWidth, Mode=TwoWay}" />
+                </fa:SettingsExpander.Footer>
+            </fa:SettingsExpander>
+            <fa:SettingsExpander
+                Header="强制透明"
+                Description="开启后，正常显示时留白完全透明。关闭后，使用组件高级设置中的不透明度。"
+                IconSource="{ci:FluentIconSource &#xF37D;}">
+                <fa:SettingsExpander.Footer>
+                    <ToggleSwitch AutomationProperties.Name="强制透明" IsChecked="{Binding ForceTransparent, Mode=TwoWay}" />
+                </fa:SettingsExpander.Footer>
+            </fa:SettingsExpander>
+        </StackPanel>
+    </ScrollViewer>
+</ci:ComponentBase>

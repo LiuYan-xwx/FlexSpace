@@ -1,0 +1,16 @@
+<ci:ComponentBase
+    x:Class="FlexSpace.FlexSpaceComponent"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ci="http://classisland.tech/schemas/xaml/core"
+    xmlns:local="using:FlexSpace"
+    x:CompileBindings="True"
+    x:TypeArguments="local:FlexSpaceComponentSettings">
+    <TextBlock
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        FontSize="12"
+        IsVisible="{Binding $self.(ci:MainWindowStylesAssist.MainWindowInEditMode)}"
+        Opacity="0.75"
+        Text="弹性空白" />
+</ci:ComponentBase>
