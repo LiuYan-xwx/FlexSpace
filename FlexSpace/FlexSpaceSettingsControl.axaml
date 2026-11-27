@@ -12,20 +12,20 @@
         <StackPanel Classes="component-settings-container">
             <fa:SettingsExpander
                 Header="权重"
-                Description="同一行有多个留白时，按各自的权重分配剩余宽度。需要大于 0"
+                Description="同一行有多个空白时，按各自的权重分配剩余宽度。需要大于 0"
                 IconSource="{ci:FluentIconSource &#xEECB;}">
                 <fa:SettingsExpander.Footer>
                     <NumericUpDown
                         Width="120"
                         AutomationProperties.Name="权重"
                         Increment="1"
-                        Minimum="0.01"
+                        Minimum="0"
                         Value="{Binding Weight, Mode=TwoWay}" />
                 </fa:SettingsExpander.Footer>
             </fa:SettingsExpander>
             <fa:SettingsExpander
                 Header="目标行宽"
-                Description="为 0 时跟随主界面最大宽度。有多个组件设置时使用最左侧组件中的设置。"
+                Description="为 0 时跟随主界面可用宽度。同一行有多个非 0 设置时，以最左侧可见组件为准。"
                 IconSource="{ci:FluentIconSource &#xE091;}">
                 <fa:SettingsExpander.Footer>
                     <NumericUpDown
